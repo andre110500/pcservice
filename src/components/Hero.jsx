@@ -18,9 +18,9 @@ const Hero = () => {
                     <Link to="/servicios" className="btn btn-primary">
                         Nuestros Servicios <ArrowRight size={20} />
                     </Link>
-                    <a href="#contact" className="btn btn-secondary">
-                        Contacto
-                    </a>
+                    <Link to="/trabajos" className="btn btn-secondary">
+                        Trabajos y Opiniones
+                    </Link>
                 </div>
             </div>
             <div className="hero-visual">

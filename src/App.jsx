@@ -5,6 +5,7 @@ import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
 import ServicesPage from './pages/ServicesPage';
+import WorkPage from './pages/WorkPage';
 import './App.scss';
 
 const Home = () => (
@@ -23,6 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/servicios" element={<ServicesPage />} />
+          <Route path="/trabajos" element={<WorkPage />} />
         </Routes>
       </div>
     </Router>
