@@ -53,73 +53,105 @@
     .before-after-section {
         padding: 60px 10%;
         background-color: var(--bg-secondary);
+        text-align: center;
 
-        .gallery-container {
+        .subtitle-desc {
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .comparison-container {
             display: flex;
-            gap: 40px;
             justify-content: center;
+        }
 
-            .image-card {
-                position: relative;
-                flex: 1;
-                max-width: 500px;
-                border-radius: 20px;
-                overflow: hidden;
-                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-                border: 2px solid rgba(255, 255, 255, 0.05);
+        .image-comparison {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.05);
+            cursor: pointer;
 
-                img {
-                    width: 100%;
-                    height: auto;
-                    display: block;
-                    transition: transform 0.5s ease;
-                }
-
-                .badge {
-                    position: absolute;
-                    top: 20px;
-                    left: 20px;
-                    padding: 8px 20px;
-                    border-radius: 30px;
-                    font-weight: bold;
-                    font-family: var(--font-heading);
-                    z-index: 3;
-                }
-
-                .badge-before {
-                    background-color: #ff3366;
-                    color: white;
-                }
-
-                .badge-after {
-                    background-color: #00f0ff;
-                    color: #0a0f1c;
-                }
-
-                .overlay {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    background: rgba(10, 15, 28, 0.85);
-                    padding: 20px;
-                    transform: translateY(100%);
-                    transition: transform 0.3s ease;
-                    z-index: 2;
-                }
-
-                &:hover {
-                    border-color: var(--color-cyan);
-
-                    img {
-                        transform: scale(1.05);
-                    }
-
-                    .overlay {
-                        transform: translateY(0);
-                    }
-                }
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
             }
+
+            .img-before {
+                position: relative;
+                z-index: 1;
+            }
+
+            .img-after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                opacity: 0;
+                animation: crossfade 5s infinite alternate ease-in-out;
+            }
+
+            &:hover .img-after {
+                opacity: 1 !important;
+                /* Muestra el estado "Después" al hacer hover */
+                animation-play-state: paused;
+            }
+
+            &:hover {
+                border-color: var(--color-cyan);
+            }
+
+            .badge-status {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                padding: 8px 20px;
+                border-radius: 30px;
+                font-weight: bold;
+                font-family: var(--font-heading);
+                z-index: 3;
+                background: linear-gradient(90deg, var(--color-cyan), var(--color-purple));
+                color: white;
+                box-shadow: 0 5px 15px rgba(0, 240, 255, 0.3);
+            }
+
+            .overlay-desc {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(10, 15, 28, 0.85);
+                padding: 20px;
+                color: var(--text-primary);
+                font-size: 1.1rem;
+                transform: translateY(100%);
+                transition: transform 0.4s ease;
+                z-index: 4;
+            }
+
+            &:hover .overlay-desc {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    @keyframes crossfade {
+
+        0%,
+        25% {
+            opacity: 0;
+        }
+
+        75%,
+        100% {
+            opacity: 1;
         }
     }
 
@@ -230,11 +262,6 @@
     .services-page {
         .page-header h1 {
             font-size: 3rem;
-        }
-
-        .before-after-section .gallery-container {
-            flex-direction: column;
-            align-items: center;
         }
 
         .pricing-section .table-responsive .pricing-table {

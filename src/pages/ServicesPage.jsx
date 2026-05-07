@@ -42,16 +42,15 @@ const ServicesPage = () => {
 
             <section className="before-after-section">
                 <h2>Experiencia Visual: <span>Antes y Después</span></h2>
-                <div className="gallery-container">
-                    <div className="image-card">
-                        <span className="badge badge-before">Antes</span>
-                        <img src="/pc_before.png" alt="PC Before" />
-                        <div className="overlay">Polvo acumulado, cables sueltos, mal flujo de aire.</div>
-                    </div>
-                    <div className="image-card">
-                        <span className="badge badge-after">Después</span>
-                        <img src="/pc_after.png" alt="PC After" />
-                        <div className="overlay">Limpieza impecable, cable management y luces perfectas.</div>
+                <p className="subtitle-desc">Observa la transformación automática o posa el cursor encima.</p>
+                <div className="comparison-container">
+                    <div className="image-comparison">
+                        <img src="/pc_before.png" alt="PC Antes del servicio" className="img-before" />
+                        <img src="/pc_after.png" alt="PC Después del servicio" className="img-after" />
+                        <span className="badge badge-status">Antes / Después</span>
+                        <div className="overlay-desc">
+                            Transformación: De polvo y desorden a cable management perfecto y luces espectaculares.
+                        </div>
                     </div>
                 </div>
             </section>
