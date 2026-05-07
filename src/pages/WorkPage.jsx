@@ -31,11 +31,6 @@ const problemsData = [
 const WorkPage = () => {
     return (
         <div className="work-page">
-            <nav className="top-nav">
-                <Link to="/" className="back-link">
-                    <ArrowLeft size={20} /> Volver al Inicio
-                </Link>
-            </nav>
 
             <header className="work-header fade-in">
                 <h1>Trabajos Realizados y <span>Opiniones de Clientes</span></h1>

@@ -29,11 +29,6 @@ const pricingData = [
 const ServicesPage = () => {
     return (
         <div className="services-page">
-            <nav className="services-nav">
-                <Link to="/" className="back-link">
-                    <ArrowLeft size={20} /> Volver al Inicio
-                </Link>
-            </nav>
 
             <header className="page-header">
                 <h1>Catálogo de <span>Servicios</span></h1>

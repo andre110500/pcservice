@@ -12,23 +12,6 @@
         }
     }
 
-    .services-nav {
-        padding: 30px 10%;
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-
-            &:hover {
-                color: var(--color-cyan);
-            }
-        }
-    }
-
     .page-header {
         text-align: center;
         padding: 40px 10%;
