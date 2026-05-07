@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowLeft, CheckCircle2 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { CheckCircle2 } from 'lucide-react';
 import './ServicesPage.scss';
 
 const serviceList = [
@@ -88,9 +87,6 @@ const ServicesPage = () => {
                 </div>
             </section>
 
-            <footer className="footer">
-                <p>&copy; {new Date().getFullYear()} Técnico PC Independiente. Todos los derechos reservados.</p>
-            </footer>
         </div>
     );
 };

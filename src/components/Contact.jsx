@@ -50,9 +50,6 @@ const Contact = () => {
                     <button type="submit" className="submit-btn">Enviar Mensaje</button>
                 </form>
             </div>
-            <footer className="footer">
-                <p>&copy; {new Date().getFullYear()} Técnico PC Independiente. Todos los derechos reservados.</p>
-            </footer>
         </section>
     );
 };

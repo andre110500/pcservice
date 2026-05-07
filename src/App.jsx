@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import ServicesPage from './pages/ServicesPage';
 import WorkPage from './pages/WorkPage';
 import './App.scss';
@@ -28,6 +29,7 @@ function App() {
           <Route path="/servicios" element={<ServicesPage />} />
           <Route path="/trabajos" element={<WorkPage />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
