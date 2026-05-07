@@ -1,6 +1,7 @@
 import React from 'react';
 import './Hero.scss';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -14,9 +15,9 @@ const Hero = () => {
                     Soluciones técnicas expertas para mantener tu equipo al máximo rendimiento. Diagnóstico profesional y reparaciones a nivel de componente.
                 </p>
                 <div className="cta-group">
-                    <a href="#services" className="btn btn-primary">
+                    <Link to="/servicios" className="btn btn-primary">
                         Nuestros Servicios <ArrowRight size={20} />
-                    </a>
+                    </Link>
                     <a href="#contact" className="btn btn-secondary">
                         Contacto
                     </a>
