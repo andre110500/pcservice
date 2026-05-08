@@ -16,13 +16,13 @@ const serviceList = [
 ];
 
 const pricingData = [
-    { service: 'Diagnóstico general', price: '$15 USD' },
-    { service: 'Limpieza profunda + Pasta Térmica', price: '$25 USD' },
-    { service: 'Formateo + Windows + Programas', price: '$30 USD' },
-    { service: 'Clonación HDD a SSD', price: '$20 USD' },
-    { service: 'Eliminación de Virus / Optimización', price: '$25 USD' },
-    { service: 'Armado de PC (Solo Mano de Obra)', price: '$40 USD' },
-    { service: 'Asesoría Setup Gamer', price: '$10 USD' }
+    { service: 'Diagnóstico general', price: '$15.000 ARS' },
+    { service: 'Limpieza profunda + Pasta Térmica', price: '$25.000 ARS' },
+    { service: 'Formateo + Windows + Programas', price: '$30.000 ARS' },
+    { service: 'Clonación HDD a SSD', price: '$20.000 ARS' },
+    { service: 'Eliminación de Virus / Optimización', price: '$25.000 ARS' },
+    { service: 'Armado de PC (Solo Mano de Obra)', price: '$40.000 ARS' },
+    { service: 'Asesoría Setup Gamer', price: '$10.000 ARS' }
 ];
 
 const ServicesPage = () => {
