@@ -28,37 +28,87 @@
         .stats {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
 
             .stat-item {
-                display: flex;
-                align-items: center;
-                gap: 20px;
                 background: rgba(255, 255, 255, 0.02);
-                padding: 15px 20px;
-                border-radius: 12px;
-                border-left: 4px solid var(--color-purple);
-                transition: transform 0.3s ease;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                border-radius: 16px;
+                overflow: hidden;
+                transition: border-color 0.3s ease, background 0.3s ease;
+                cursor: pointer;
 
-                &:hover {
-                    transform: translateX(10px);
-                    background: rgba(255, 255, 255, 0.05);
+                &.open {
+                    border-color: rgba(0, 240, 255, 0.4);
+                    background: rgba(0, 240, 255, 0.08);
                 }
 
-                .icon {
-                    color: var(--color-cyan);
-                    width: 32px;
-                    height: 32px;
+                .stat-header {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    padding: 18px 22px;
+                }
+
+                .stat-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 44px;
+                    height: 44px;
+                    background: rgba(0, 240, 255, 0.12);
+                    border-radius: 50%;
+
+                    .icon {
+                        color: var(--color-cyan);
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                .stat-title-row {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                .stat-emoji {
+                    font-size: 1.4rem;
                 }
 
                 h4 {
                     font-size: 1.1rem;
-                    margin-bottom: 5px;
+                    margin: 0;
                 }
 
                 p {
                     color: var(--text-secondary);
-                    font-size: 0.9rem;
+                    font-size: 0.95rem;
+                    margin: 0;
+                }
+
+                .toggle-arrow {
+                    margin-left: auto;
+                    font-size: 0.95rem;
+                    color: var(--text-secondary);
+                }
+
+                .stat-description {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.35s ease, padding 0.35s ease;
+                    padding: 0 22px;
+
+                    p {
+                        padding: 0 0 18px;
+                        margin: 0;
+                        color: #f3f7ff;
+                    }
+                }
+
+                &.open .stat-description {
+                    max-height: 200px;
+                    padding: 0 22px 18px;
                 }
             }
         }
