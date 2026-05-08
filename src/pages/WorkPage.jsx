@@ -21,11 +21,35 @@ const testimonialsData = [
 
 const problemsData = [
     { title: 'PC extremadamente lenta', solution: 'Formateo de fábrica, desinfección o upgrade a disco de estado sólido.', icon: <Activity size={32} /> },
-    { title: 'Sobrecalentamiento', solution: 'Limpieza profunda de disipadores y cambio de pasta térmica de alta conductividad.', icon: <ThermometerSun size={32} /> },
-    { title: 'Pantalla Azul', solution: 'Diagnóstico extensivo de RAM/HDD y reparación del sector de arranque.', icon: <MonitorX size={32} /> },
-    { title: 'Infectada con Virus', solution: 'Escaneo severo, limpieza de rootkits y recuperación de datos secuestrados.', icon: <ShieldCheck size={32} /> },
+    {
+        title: 'Sobrecalentamiento',
+        solution: 'Limpieza profunda de disipadores y cambio de pasta térmica de alta conductividad.',
+        icon: <ThermometerSun size={32} />,
+        resourceUrl: 'https://www.alcpu.com/CoreTemp/',
+        resourceLabel: 'Ver Core Temp'
+    },
+    {
+        title: 'Pantalla Azul',
+        solution: 'Diagnóstico extensivo de RAM/HDD y reparación del sector de arranque.',
+        icon: <MonitorX size={32} />,
+        resourceUrl: 'https://www.nirsoft.net/utils/blue_screen_view.html',
+        resourceLabel: 'Ver BlueScreenView'
+    },
+    {
+        title: 'Infectada con Virus',
+        solution: 'Escaneo severo, limpieza de rootkits y recuperación de datos secuestrados.',
+        icon: <ShieldCheck size={32} />,
+        resourceUrl: 'https://www.virustotal.com/',
+        resourceLabel: 'Analizar en VirusTotal'
+    },
     { title: 'Ruido en ventilación', solution: 'Mantenimiento del eje magnético o reemplazo por coolers premium silenciosos.', icon: <Fan size={32} /> },
-    { title: 'HDD Lleno / Roto', solution: 'Backup a disco externo, recuperación e instalación de nueva unidad.', icon: <HardDrive size={32} /> }
+    {
+        title: 'HDD Lleno / Roto',
+        solution: 'Backup a disco externo, recuperación e instalación de nueva unidad.',
+        icon: <HardDrive size={32} />,
+        resourceUrl: 'https://crystalmark.info/en/software/crystaldiskinfo/',
+        resourceLabel: 'Testear con CrystalDiskInfo'
+    }
 ];
 
 const WorkPage = () => {
@@ -79,6 +103,16 @@ const WorkPage = () => {
                             <div className="icon-wrapper">{prob.icon}</div>
                             <h4>{prob.title}</h4>
                             <p className="problem-solution">{prob.solution}</p>
+                            {prob.resourceUrl && (
+                                <a
+                                    className="problem-resource-link"
+                                    href={prob.resourceUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {prob.resourceLabel}
+                                </a>
+                            )}
                         </div>
                     ))}
                 </div>

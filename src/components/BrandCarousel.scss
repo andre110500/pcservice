@@ -1,0 +1,158 @@
+.brands-section {
+    padding: 80px 0;
+    background: var(--bg-primary);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+
+    .brands-header {
+        text-align: center;
+        margin-bottom: 38px;
+        padding: 0 10%;
+    }
+
+    .section-title {
+        font-size: 2.6rem;
+        margin-bottom: 0.9rem;
+
+        span {
+            color: var(--color-purple);
+        }
+    }
+
+    .section-subtitle {
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+    }
+
+    .brands-carousel {
+        overflow: hidden;
+        mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    }
+
+    .brands-track {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        gap: 18px;
+        animation: brandsScroll 34s linear infinite;
+        padding: 6px 0;
+    }
+
+    .brand-item {
+        min-width: 190px;
+        height: 106px;
+        position: relative;
+        perspective: 1000px;
+        cursor: pointer;
+    }
+
+    .brand-item-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        will-change: transform;
+        transition: transform 0.55s ease;
+    }
+
+    .brand-item:hover .brand-item-inner {
+        transform: rotateY(180deg);
+    }
+
+    .brand-face {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 16px;
+        background: #151922;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    .brand-face-front {
+        transform: rotateY(0deg) translateZ(1px);
+
+        img {
+            width: 104px;
+            height: 40px;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+        }
+
+        img.brand-logo-invert {
+            /* Algunos logos vienen en color oscuro y quedan invisibles con el fondo */
+            filter: brightness(0) invert(1) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+        }
+
+        span {
+            font-size: 0.86rem;
+            letter-spacing: 0.4px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+    }
+
+    .brand-face-back {
+        transform: rotateY(180deg) translateZ(1px);
+        padding: 12px;
+        background: linear-gradient(145deg, #2b2140, #1a2d44);
+        border-color: rgba(0, 240, 255, 0.25);
+
+        p {
+            margin: 0;
+            font-size: 0.8rem;
+            line-height: 1.35;
+            text-align: center;
+            color: #f6f9ff;
+            font-weight: 600;
+        }
+    }
+
+    .brand-item:hover .brand-face-front,
+    .brand-item:hover .brand-face-back {
+        border-color: rgba(0, 240, 255, 0.35);
+    }
+}
+
+@keyframes brandsScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 968px) {
+    .brands-section {
+        padding: 60px 0;
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .brand-item {
+            min-width: 165px;
+            height: 92px;
+
+            .brand-face-front {
+                img {
+                    width: 90px;
+                    height: 34px;
+                }
+            }
+
+            .brand-face-back {
+                p {
+                    font-size: 0.74rem;
+                }
+            }
+        }
+    }
+}
