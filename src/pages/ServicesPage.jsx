@@ -103,7 +103,6 @@ const ServicesPage = () => {
 
             <section className="before-after-section">
                 <h2>Experiencia Visual: <span>Antes y Después</span></h2>
-                <p className="subtitle-desc">Observa la transformación automática o posa el cursor encima.</p>
                 <div className="comparison-container">
                     <div className="image-comparison">
                         <img src="/pc_before.png" alt="PC Antes del servicio" className="img-before" />

@@ -24,10 +24,14 @@ const featureItems = [
 ];
 
 const About = () => {
-    const [openIndex, setOpenIndex] = useState(null);
+    const [openIndex, setOpenIndex] = useState([]);
 
     const toggleOpen = (index) => {
-        setOpenIndex((current) => (current === index ? null : index));
+        setOpenIndex((current) => 
+            current.includes(index) 
+                ? current.filter(i => i !== index) 
+                : [...current, index]
+        );
     };
 
     return (
@@ -42,7 +46,7 @@ const About = () => {
                     {featureItems.map((item, index) => (
                         <div
                             key={item.title}
-                            className={`stat-item ${openIndex === index ? 'open' : ''}`}
+                            className={`stat-item ${openIndex.includes(index) ? 'open' : ''}`}
                             onClick={() => toggleOpen(index)}
                         >
                             <div className="stat-header">
@@ -56,7 +60,7 @@ const About = () => {
                                     </div>
                                     <p>{item.subtitle}</p>
                                 </div>
-                                <span className="toggle-arrow">{openIndex === index ? '▲' : '▼'}</span>
+                                <span className="toggle-arrow">{openIndex.includes(index) ? '▲' : '▼'}</span>
                             </div>
                             <div className="stat-description">
                                 <p>{item.more}</p>
