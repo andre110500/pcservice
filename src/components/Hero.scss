@@ -31,6 +31,43 @@
         color: var(--text-secondary);
         margin-bottom: 2.5rem;
         max-width: 500px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        display: block;
+        position: relative;
+        min-height: 4.5rem;
+    }
+
+    .subtitle-placeholder {
+        visibility: hidden;
+        display: block;
+        line-height: 1.6;
+    }
+
+    .typed-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline;
+        color: var(--text-secondary);
+    }
+
+
+    .typing-cursor {
+        display: inline-block;
+        margin-left: 0.15rem;
+        color: var(--color-cyan);
+        font-weight: 700;
+        animation: blinkCursor 0.8s steps(2, start) infinite;
+    }
+
+    @keyframes blinkCursor {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
     }
 
     .cta-group {
