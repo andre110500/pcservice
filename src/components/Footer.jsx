@@ -6,6 +6,10 @@ import './Footer.scss';
 const Footer = () => {
     const year = new Date().getFullYear();
 
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
+
     return (
         <footer className="site-footer">
             <div className="footer-content">
@@ -16,9 +20,9 @@ const Footer = () => {
 
                 <nav className="footer-links" aria-label="Navegacion del footer">
                     <h4>Secciones</h4>
-                    <Link to="/">Inicio</Link>
-                    <Link to="/servicios">Servicios</Link>
-                    <Link to="/trabajos">Trabajos</Link>
+                    <Link to="/" onClick={scrollToTop}>Inicio</Link>
+                    <Link to="/servicios" onClick={scrollToTop}>Servicios</Link>
+                    <Link to="/trabajos" onClick={scrollToTop}>Trabajos</Link>
                 </nav>
 
                 <div className="footer-contact">

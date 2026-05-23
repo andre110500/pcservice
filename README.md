@@ -1,16 +1,31 @@
-# React + Vite
+# Nombre del proyecto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Techfix
 
-Currently, two official plugins are available:
+## Breve descripción del sitio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Sitio web de un servicio técnico especializado en mantenimiento, reparación y optimización de computadoras. El proyecto muestra secciones sobre servicios, trabajos realizados y testimonios de clientes, además de incluir efectos visuales como tarjetas giratorias en la galería de proyectos.
 
-## React Compiler
+## Instrucciones para visualizar el proyecto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clona o descarga el repositorio.
+2. Abre una terminal en la carpeta del proyecto.
+3. Instala las dependencias con:
 
-## Expanding the ESLint configuration
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. Inicia el servidor de desarrollo con:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Abre el navegador y visita la URL que muestra Vite, por ejemplo:
+
+   ```
+   http://localhost:5173
+   ```
+
+6. Navega por el sitio para ver las secciones de servicios, trabajos realizados y testimonios.

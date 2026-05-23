@@ -4,12 +4,54 @@ import { Link } from 'react-router-dom';
 import './WorkPage.scss';
 
 const worksData = [
-    { id: 1, title: 'Upgrade a SSD', desc: 'Clonación y transición de disco mecánico a estado sólido NMVe de alta velocidad.', tag: 'Antes / Después', img: '/work_ssd.png' },
-    { id: 2, title: 'Armado de PC Gamer', desc: 'Ensamblaje minucioso de componentes premium con cable management perfecto.', tag: 'Premium', img: '/hero.png' },
-    { id: 3, title: 'Instalación de Windows', desc: 'Limpieza e instalación desde cero del sistema base junto con programas vitales.', tag: 'Formateo', img: '/service.png' },
-    { id: 4, title: 'Cambio de Pasta Térmica', desc: 'Sustitución de pasta térmica reseca para disipar temperaturas extremas.', tag: 'Mantenimiento', img: '/pc_after.png' },
-    { id: 5, title: 'Desinfección de Malware', desc: 'Remoción de virus que inyectan publicidad o secuestran la información valiosa.', tag: 'Seguridad', img: '/about.png' },
-    { id: 6, title: 'Optimización General', desc: 'Aceleración de respuesta quitando programas en segundo plano que limitan.', tag: 'Rendimiento', img: '/pc_before.png' }
+    {
+        id: 1,
+        title: 'Upgrade a SSD',
+        desc: 'Clonación y transición de disco mecánico a estado sólido NMVe de alta velocidad.',
+        backContent: '💿🔄 Se realizó clonación completa del sistema operativo 💻 y programas 📱.\n\n✅ Se instaló SSD NVMe Samsung 970 EVO de 500GB 🚀\n\n⚡ Velocidad de arranque mejorada de 45s a 8s\n\n📊 Transferencia de datos completada sin pérdida de información',
+        tag: 'Antes / Después',
+        img: '/work_ssd.png'
+    },
+    {
+        id: 2,
+        title: 'Armado de PC Gamer',
+        desc: 'Ensamblaje minucioso de componentes premium con cable management perfecto.',
+        backContent: '🖥️🎮 Componentes utilizados:\n\n• 🧠 Ryzen 5 5600X\n• 🎨 RTX 3060 Ti\n• 🧠 16GB DDR4-3200\n• 💾 SSD NVMe 1TB\n• 🔋 Fuente 750W 80+ Gold\n• 🌈 Gabinete con RGB\n\n🔧 Cable management profesional\n📈 Overclocking estable\n❄️ Temperaturas óptimas',
+        tag: 'Premium',
+        img: '/hero.png'
+    },
+    {
+        id: 3,
+        title: 'Instalación de Windows',
+        desc: 'Limpieza e instalación desde cero del sistema base junto con programas vitales.',
+        backContent: '🪟🧹 Formateo completo del disco 💿\n\n🆕 Instalación de Windows 11 Pro\n\n🔧 Configuración de drivers actualizados\n\n📦 Instalación de programas:\n• 🛡️ Antivirus\n• 🌐 Navegador\n• 📄 Office\n• ⚙️ Programas esenciales\n\n🚀 Optimización del sistema para máximo rendimiento',
+        tag: 'Formateo',
+        img: '/service.png'
+    },
+    {
+        id: 4,
+        title: 'Cambio de Pasta Térmica',
+        desc: 'Sustitución de pasta térmica reseca para disipar temperaturas extremas.',
+        backContent: '🌡️🔥 Pasta térmica anterior completamente reseca 🏜️\n\n❄️ Aplicación de pasta térmica Arctic MX-4 de alta conductividad\n\n🧽 Limpieza profunda de disipadores\n\n📉 Temperaturas reducidas de 85°C a 45°C bajo carga\n\n🤫 Sistema estable y silencioso',
+        tag: 'Mantenimiento',
+        img: '/pc_after.png'
+    },
+    {
+        id: 5,
+        title: 'Desinfección de Malware',
+        desc: 'Remoción de virus que inyectan publicidad o secuestran la información valiosa.',
+        backContent: '🛡️🦠 Detección de rootkit y malware avanzado 🔍\n\n🛠️ Eliminación completa con herramientas especializadas\n\n🔓 Recuperación de archivos encriptados\n\n🛡️ Instalación de protección avanzada\n\n✅ Sistema completamente limpio y seguro',
+        tag: 'Seguridad',
+        img: '/about.png'
+    },
+    {
+        id: 6,
+        title: 'Optimización General',
+        desc: 'Aceleración de respuesta quitando programas en segundo plano que limitan.',
+        backContent: '⚡🧹 Eliminación de 25+ programas innecesarios 🗑️\n\n🚫 Desactivación de servicios de Windows no utilizados\n\n🧽 Limpieza de registro y archivos temporales\n\n⚙️ Optimización de inicio automático\n\n📈 Rendimiento mejorado en un 300%',
+        tag: 'Rendimiento',
+        img: '/pc_before.png'
+    }
 ];
 
 const testimonialsData = [
@@ -66,13 +108,22 @@ const WorkPage = () => {
                 <div className="works-grid">
                     {worksData.map((work) => (
                         <div key={work.id} className="work-card fade-in">
-                            <div className="img-container">
-                                <img src={work.img} alt={work.title} />
-                                {work.tag && <span className="work-tag">{work.tag}</span>}
-                            </div>
-                            <div className="card-content">
-                                <h3>{work.title}</h3>
-                                <p>{work.desc}</p>
+                            <div className="work-card-inner">
+                                <div className="work-face work-face-front">
+                                    <div className="img-container">
+                                        <img src={work.img} alt={work.title} />
+                                        {work.tag && <span className="work-tag">{work.tag}</span>}
+                                    </div>
+                                    <div className="card-content">
+                                        <h3>{work.title}</h3>
+                                        <p>{work.desc}</p>
+                                    </div>
+                                </div>
+                                <div className="work-face work-face-back">
+                                    <div className="back-content">
+                                        <p>{work.backContent}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     ))}
