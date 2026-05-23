@@ -1,39 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Services.scss';
 import { Cpu, MonitorSmartphone, Wrench, ShieldAlert } from 'lucide-react';
-
-const servicesData = [
-    {
-        title: 'Reparación de Hardware',
-        desc: 'Diagnóstico y sustitución de placas base, fuentes de alimentación, discos duros y otros componentes defectuosos.',
-        more: 'Diagnóstico completo, reparación precisa y pruebas finales para asegurar que tu equipo vuelva a funcionar con estabilidad.',
-        icon: <Cpu size={40} />,
-        emoji: '🛠️'
-    },
-    {
-        title: 'Optimización de Sistema',
-        desc: 'Limpieza de virus, formateo, actualización de drivers e instalación de software para el máximo rendimiento.',
-        more: 'Se optimiza el sistema, se eliminan procesos innecesarios y se deja el equipo más rápido y fluido.',
-        icon: <MonitorSmartphone size={40} />,
-        emoji: '⚡'
-    },
-    {
-        title: 'Mantenimiento Preventivo',
-        desc: 'Limpieza interna, cambio de pasta térmica y revisión de voltajes para prevenir fallos a largo plazo.',
-        more: 'Incluye limpieza profunda, revisión de disipación térmica y ajustes para prolongar la vida útil de tu PC.',
-        icon: <Wrench size={40} />,
-        emoji: '🧽'
-    },
-    {
-        title: 'Recuperación de Datos',
-        desc: 'Rescate de información valiosa de discos duros dañados o sistemas corruptos.',
-        more: 'Recuperamos archivos importantes con cuidado y te ayudamos a guardar copias seguras.',
-        icon: <ShieldAlert size={40} />,
-        emoji: '💾'
-    }
-];
+import services from '../data/services';
 
 const Services = () => {
+    const [showAll, setShowAll] = useState(false);
+
+    const displayed = showAll ? services : services.slice(0, 4);
+
     return (
         <section id="services" className="services-section">
             <div className="services-header">
@@ -43,8 +17,8 @@ const Services = () => {
 
             <div className="services-content">
                 <div className="services-grid">
-                    {servicesData.map((service, index) => (
-                        <div className="service-card" key={index}>
+                    {displayed.map((service) => (
+                        <div className="service-card" key={service.id}>
                             <div className="service-card-inner">
                                 <div className="service-face service-face-front">
                                     <div className="icon-wrapper">{service.icon}</div>
@@ -58,6 +32,14 @@ const Services = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+                <div className="services-controls">
+                    {!showAll && services.length > 4 && (
+                        <button className="btn-show-more" onClick={() => setShowAll(true)}>Mostrar más</button>
+                    )}
+                    {showAll && (
+                        <button className="btn-show-more" onClick={() => setShowAll(false)}>Mostrar menos</button>
+                    )}
                 </div>
                 <div className="services-image">
                     <img src="/service.png" alt="Placa Base y Hardware" />
