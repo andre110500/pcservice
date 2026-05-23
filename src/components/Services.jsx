@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Services.scss';
-import { Cpu, MonitorSmartphone, Wrench, ShieldAlert } from 'lucide-react';
+import { Cpu, MonitorSmartphone, Wrench, ShieldAlert, ArrowRight } from 'lucide-react';
 import services from '../data/services';
 
 const Services = () => {
-    const [showAll, setShowAll] = useState(false);
-
-    const displayed = showAll ? services : services.slice(0, 4);
+    const displayed = services.slice(0, 4);
 
     return (
         <section id="services" className="services-section">
@@ -33,18 +32,16 @@ const Services = () => {
                         </div>
                     ))}
                 </div>
-                <div className="services-controls">
-                    {!showAll && services.length > 4 && (
-                        <button className="btn-show-more" onClick={() => setShowAll(true)}>Mostrar más</button>
-                    )}
-                    {showAll && (
-                        <button className="btn-show-more" onClick={() => setShowAll(false)}>Mostrar menos</button>
-                    )}
-                </div>
                 <div className="services-image">
                     <img src="/service.png" alt="Placa Base y Hardware" />
                     <div className="overlay"></div>
                 </div>
+            </div>
+
+            <div className="services-footer">
+                <Link to="/servicios" className="btn btn-primary">
+                    Ver todos los servicios <ArrowRight size={20} />
+                </Link>
             </div>
         </section>
     );
