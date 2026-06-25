@@ -12,8 +12,7 @@ const ServicesPage = () => {
                 <p>Soluciones a medida para potenciar y rescatar tus equipos.</p>
             </header>
 
-            <section className="before-after-section">
-                <h2>Experiencia Visual: <span>Antes y Después</span></h2>
+            <section className="full-services-section">
                 <div className="comparison-container">
                     <div className="image-comparison">
                         <img src="/pc_before.png" alt="PC Antes del servicio" className="img-before" />
@@ -24,10 +23,6 @@ const ServicesPage = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section className="full-services-section">
-                <h2>Lo que puedo hacer <span>por ti</span></h2>
                 <div className="services-grid">
                     {services.map((srv) => (
                         <div key={srv.id} className="service-item">

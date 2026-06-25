@@ -34,14 +34,26 @@
         }
     }
 
-    .before-after-section {
-        padding: 60px 10%;
-        background-color: var(--bg-secondary);
-        text-align: center;
+    @keyframes crossfade {
+
+        0%,
+        25% {
+            opacity: 0;
+        }
+
+        75%,
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .full-services-section {
+        padding: 0px 10% 80px 10%;
 
         .comparison-container {
             display: flex;
             justify-content: center;
+            margin-bottom: 50px;
         }
 
         .image-comparison {
@@ -78,7 +90,6 @@
 
             &:hover .img-after {
                 opacity: 1 !important;
-                /* Muestra el estado "Después" al hacer hover */
                 animation-play-state: paused;
             }
 
@@ -118,23 +129,6 @@
                 transform: translateY(0);
             }
         }
-    }
-
-    @keyframes crossfade {
-
-        0%,
-        25% {
-            opacity: 0;
-        }
-
-        75%,
-        100% {
-            opacity: 1;
-        }
-    }
-
-    .full-services-section {
-        padding: 80px 10%;
 
         .services-grid {
             display: grid;
