@@ -90,6 +90,19 @@ a {
   opacity: 0.68;
 }
 
+.site-footer .footer-contact a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-cyan);
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     &::before {
