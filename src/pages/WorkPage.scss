@@ -53,6 +53,15 @@
     .works-section {
         padding: 60px 10%;
 
+        .works-intro {
+            max-width: 640px;
+            margin: -2rem auto 3rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
         .works-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -359,6 +368,13 @@
                 .work-card {
                     height: 370px;
                 }
+            }
+
+            .works-intro {
+                font-size: 0.95rem;
+                line-height: 1.5;
+                margin: -1.75rem auto 2.5rem;
+                max-width: 92%;
             }
         }
     }

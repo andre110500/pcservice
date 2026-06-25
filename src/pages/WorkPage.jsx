@@ -100,13 +100,9 @@ const WorkPage = () => {
     return (
         <div className="work-page">
 
-            <header className="work-header fade-in">
-                <h1>Trabajos Realizados y <span>Opiniones de Clientes</span></h1>
-                <p>Conocé algunas de las reparaciones, optimizaciones y mejoras realizadas para nuestros clientes.</p>
-            </header>
-
             <section className="works-section">
                 <h2 className="fade-in">Galería de <span>Proyectos</span></h2>
+                <p className="works-intro fade-in">Conocé algunas de las reparaciones, optimizaciones y mejoras realizadas para nuestros clientes.</p>
                 <div className="works-grid">
                     {worksData.map((work) => (
                         <div key={work.id} className="work-card fade-in">
