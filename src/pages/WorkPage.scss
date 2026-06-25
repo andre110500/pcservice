@@ -65,6 +65,7 @@
             .work-card {
                 perspective: 1000px;
                 cursor: pointer;
+                height: 390px;
 
                 &:hover {
                     .work-card-inner {
@@ -75,7 +76,7 @@
                 .work-card-inner {
                     position: relative;
                     width: 100%;
-                    min-height: 350px;
+                    height: 100%;
                     display: grid;
                     transform-style: preserve-3d;
                     transition: transform 0.6s ease;
@@ -89,6 +90,7 @@
                     -webkit-backface-visibility: hidden;
                     border-radius: 16px;
                     overflow: hidden;
+                    height: 100%;
                 }
 
                 .work-face-front {
@@ -132,6 +134,7 @@
 
                     .card-content {
                         padding: 20px;
+                        flex: 1;
 
                         h3 {
                             font-size: 1.25rem;
@@ -161,8 +164,8 @@
                         color: #f3f7ff;
 
                         p {
-                            font-size: 0.95rem;
-                            line-height: 1.6;
+                            font-size: 0.9rem;
+                            line-height: 1.45;
                             margin: 0;
                             white-space: pre-line;
                         }
@@ -349,6 +352,14 @@
 
         h2 {
             font-size: 2rem;
+        }
+
+        .works-section {
+            .works-grid {
+                .work-card {
+                    height: 370px;
+                }
+            }
         }
     }
 }

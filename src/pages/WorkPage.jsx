@@ -2,13 +2,15 @@ import React from 'react';
 import { ArrowLeft, HardDrive, ShieldCheck, Gamepad2, Settings, Fan, AlertTriangle, MonitorX, ThermometerSun, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './WorkPage.scss';
+import malwareDisinfectionImg from '../assets/malware_disinfection.png';
+import cpuPasteCardImg from '../assets/cpu_paste_card.png';
 
 const worksData = [
     {
         id: 1,
         title: 'Upgrade a SSD',
         desc: 'Clonación y transición de disco mecánico a estado sólido NMVe de alta velocidad.',
-        backContent: '💿🔄 Se realizó clonación completa del sistema operativo 💻 y programas 📱.\n\n✅ Se instaló SSD NVMe Samsung 970 EVO de 500GB 🚀\n\n⚡ Velocidad de arranque mejorada de 45s a 8s\n\n📊 Transferencia de datos completada sin pérdida de información',
+        backContent: '💿 Clonación completa del sistema y programas.\n\n✅ Instalación de SSD NVMe Samsung 970 EVO.\n\n⚡ Arranque mejorado de 45s a 8s.\n\n📊 Datos transferidos sin pérdidas.',
         tag: 'Antes / Después',
         img: '/work_ssd.png'
     },
@@ -16,7 +18,7 @@ const worksData = [
         id: 2,
         title: 'Armado de PC Gamer',
         desc: 'Ensamblaje minucioso de componentes premium con cable management perfecto.',
-        backContent: '🖥️🎮 Componentes utilizados:\n\n• 🧠 Ryzen 5 5600X\n• 🎨 RTX 3060 Ti\n• 🧠 16GB DDR4-3200\n• 💾 SSD NVMe 1TB\n• 🔋 Fuente 750W 80+ Gold\n• 🌈 Gabinete con RGB\n\n🔧 Cable management profesional\n📈 Overclocking estable\n❄️ Temperaturas óptimas',
+        backContent: '🖥️ PC gamer armada con Ryzen 5, RTX 3060 Ti, SSD NVMe y fuente 80+ Gold.\n\n🔧 Cable management prolijo.\n\n📈 Configuración estable.\n\n❄️ Temperaturas óptimas.',
         tag: 'Premium',
         img: '/hero.png'
     },
@@ -24,7 +26,7 @@ const worksData = [
         id: 3,
         title: 'Instalación de Windows',
         desc: 'Limpieza e instalación desde cero del sistema base junto con programas vitales.',
-        backContent: '🪟🧹 Formateo completo del disco 💿\n\n🆕 Instalación de Windows 11 Pro\n\n🔧 Configuración de drivers actualizados\n\n📦 Instalación de programas:\n• 🛡️ Antivirus\n• 🌐 Navegador\n• 📄 Office\n• ⚙️ Programas esenciales\n\n🚀 Optimización del sistema para máximo rendimiento',
+        backContent: '🪟 Formateo completo e instalación de Windows 11 Pro.\n\n🔧 Drivers actualizados.\n\n📦 Programas esenciales instalados.\n\n🚀 Sistema optimizado para mejor rendimiento.',
         tag: 'Formateo',
         img: '/service.png'
     },
@@ -32,23 +34,23 @@ const worksData = [
         id: 4,
         title: 'Cambio de Pasta Térmica',
         desc: 'Sustitución de pasta térmica reseca para disipar temperaturas extremas.',
-        backContent: '🌡️🔥 Pasta térmica anterior completamente reseca 🏜️\n\n❄️ Aplicación de pasta térmica Arctic MX-4 de alta conductividad\n\n🧽 Limpieza profunda de disipadores\n\n📉 Temperaturas reducidas de 85°C a 45°C bajo carga\n\n🤫 Sistema estable y silencioso',
+        backContent: '🌡️ Pasta térmica anterior reseca.\n\n❄️ Aplicación de Arctic MX-4.\n\n🧽 Limpieza de disipadores.\n\n📉 Temperaturas reducidas de 85°C a 45°C.',
         tag: 'Mantenimiento',
-        img: '/pc_after.png'
+        img: cpuPasteCardImg
     },
     {
         id: 5,
         title: 'Desinfección de Malware',
         desc: 'Remoción de virus que inyectan publicidad o secuestran la información valiosa.',
-        backContent: '🛡️🦠 Detección de rootkit y malware avanzado 🔍\n\n🛠️ Eliminación completa con herramientas especializadas\n\n🔓 Recuperación de archivos encriptados\n\n🛡️ Instalación de protección avanzada\n\n✅ Sistema completamente limpio y seguro',
+        backContent: '🛡️ Detección de malware avanzado.\n\n🛠️ Eliminación con herramientas especializadas.\n\n🔓 Recuperación de archivos.\n\n✅ Sistema limpio y protegido.',
         tag: 'Seguridad',
-        img: '/about.png'
+        img: malwareDisinfectionImg
     },
     {
         id: 6,
         title: 'Optimización General',
         desc: 'Aceleración de respuesta quitando programas en segundo plano que limitan.',
-        backContent: '⚡🧹 Eliminación de 25+ programas innecesarios 🗑️\n\n🚫 Desactivación de servicios de Windows no utilizados\n\n🧽 Limpieza de registro y archivos temporales\n\n⚙️ Optimización de inicio automático\n\n📈 Rendimiento mejorado en un 300%',
+        backContent: '⚡ Eliminación de programas innecesarios.\n\n🚫 Servicios no utilizados desactivados.\n\n🧽 Limpieza de temporales.\n\n📈 Equipo mucho más ágil.',
         tag: 'Rendimiento',
         img: '/pc_before.png'
     }
