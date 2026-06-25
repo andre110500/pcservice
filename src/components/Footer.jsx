@@ -29,7 +29,7 @@ const Footer = () => {
                     <h4>Contacto</h4>
                     <p><Phone size={16} /> +1 234 567 8900</p>
                     <p><Mail size={16} /> contacto@tecnicopc.com</p>
-                    <p><MapPin size={16} /> Servicio a domicilio - CABA</p>
+                    <p><MapPin size={16} /> Av. Corrientes 1234, CABA</p>
                 </div>
             </div>
 

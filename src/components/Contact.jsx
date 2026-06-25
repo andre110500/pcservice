@@ -13,27 +13,40 @@ const Contact = () => {
                     </p>
 
                     <div className="info-list">
-                        <div className="info-item">
+                        <a
+                            href="https://wa.me/573001234567?text=¡Hola! Quiero información sobre los servicios de reparación de PCs."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="info-item"
+                        >
                             <Phone className="icon" />
                             <div>
-                                <h5>Teléfono / WhatsApp</h5>
+                                <h5>WhatsApp</h5>
                                 <p>+1 234 567 8900</p>
                             </div>
-                        </div>
-                        <div className="info-item">
+                        </a>
+                        <a
+                            href="mailto:contacto@tecnicopc.com"
+                            className="info-item"
+                        >
                             <Mail className="icon" />
                             <div>
                                 <h5>Email</h5>
                                 <p>contacto@tecnicopc.com</p>
                             </div>
-                        </div>
-                        <div className="info-item">
+                        </a>
+                        <a
+                            href="https://maps.google.com/?q=CABA,+Buenos+Aires,+Argentina"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="info-item"
+                        >
                             <MapPin className="icon" />
                             <div>
                                 <h5>Ubicación</h5>
-                                <p>Servicio a domicilio - Caba</p>
+                                <p>Av. Corrientes 1234, CABA</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 

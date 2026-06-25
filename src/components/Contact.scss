@@ -40,6 +40,13 @@
                 display: flex;
                 align-items: center;
                 gap: 20px;
+                text-decoration: none;
+                cursor: pointer;
+                transition: transform 0.2s ease;
+
+                &:hover {
+                    transform: translateX(4px);
+                }
 
                 .icon {
                     color: var(--color-cyan);

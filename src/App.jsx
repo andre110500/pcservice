@@ -7,6 +7,7 @@ import BrandCarousel from './components/BrandCarousel';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 import ServicesPage from './pages/ServicesPage';
 import WorkPage from './pages/WorkPage';
 import './App.scss';
@@ -32,6 +33,7 @@ function App() {
           <Route path="/trabajos" element={<WorkPage />} />
         </Routes>
         <Footer />
+        <WhatsAppButton />
       </div>
     </Router>
   );
