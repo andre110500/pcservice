@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Services.scss';
 import { Cpu, MonitorSmartphone, Wrench, ShieldAlert, ArrowRight } from 'lucide-react';
 import services from '../data/services';
+import ImageSlideshow from './ImageSlideshow';
 
 const Services = () => {
     const displayed = services.slice(0, 4);
@@ -33,7 +34,11 @@ const Services = () => {
                     ))}
                 </div>
                 <div className="services-image">
-                    <img src="/service.png" alt="Placa Base y Hardware" loading="lazy" />
+                    <ImageSlideshow
+                        images={['/service.png', '/cable_management.png', '/cpu_paste.png', '/gpu_mounting.png']}
+                        alt="Servicios"
+                        interval={4000}
+                    />
                     <div className="overlay"></div>
                 </div>
             </div>

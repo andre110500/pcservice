@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Hero.scss';
 import { ArrowRight } from 'lucide-react';
+import ImageSlideshow from './ImageSlideshow';
 
 const Hero = () => {
     const fullSubtitle = 'Soluciones técnicas expertas para mantener tu equipo al máximo rendimiento. Diagnóstico profesional y reparaciones a nivel de componente.';
@@ -38,7 +39,11 @@ const Hero = () => {
             </div>
             <div className="hero-visual">
                 <div className="image-wrapper">
-                    <img src="/hero.png" alt="PC Repair Technician" />
+                    <ImageSlideshow
+                        images={['/hero.png', '/man_working.png', '/laptop_repair.png']}
+                        alt="PC Repair Technician"
+                        interval={4500}
+                    />
                     <div className="glow-effect"></div>
                 </div>
             </div>
