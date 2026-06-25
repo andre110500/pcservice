@@ -93,9 +93,38 @@
             background: linear-gradient(90deg, var(--color-cyan), var(--color-purple));
             color: white;
             border: none;
+            position: relative;
+            overflow: hidden;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            animation: pulseCta 2s infinite;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                right: -2px;
+                bottom: -2px;
+                background: linear-gradient(90deg, var(--color-cyan), var(--color-purple), var(--color-cyan));
+                background-size: 200% 100%;
+                border-radius: 52px;
+                z-index: -1;
+                animation: shimmerBorder 3s linear infinite;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 2px;
+                background: linear-gradient(90deg, var(--color-cyan), var(--color-purple));
+                border-radius: 50px;
+                z-index: -1;
+            }
 
             &:hover {
-                box-shadow: 0 10px 25px rgba(0, 240, 255, 0.3);
+                transform: translateY(-3px) scale(1.05);
+                box-shadow: 0 10px 35px rgba(0, 240, 255, 0.4);
             }
         }
 
@@ -149,6 +178,24 @@
                 animation: pulseGlow 4s infinite alternate;
             }
         }
+    }
+}
+
+@keyframes pulseCta {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(176, 38, 255, 0.5);
+    }
+}
+
+@keyframes shimmerBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
     }
 }
 
