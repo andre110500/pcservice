@@ -15,9 +15,9 @@ import './App.scss';
 const Home = () => (
   <>
     <Hero />
-    <Services />
-    <BrandCarousel />
     <About />
+    <BrandCarousel />
+    <Services />
     <Contact />
   </>
 );
