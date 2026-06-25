@@ -70,7 +70,7 @@ const About = () => {
                 </div>
             </div>
             <div className="about-image">
-                <img src="/about.png" alt="Técnico trabajando" />
+                <img src="/me.webp" alt="Técnico trabajando" />
                 <div className="glow-circle"></div>
             </div>
         </section>
