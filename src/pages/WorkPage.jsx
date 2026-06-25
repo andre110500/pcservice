@@ -111,7 +111,7 @@ const WorkPage = () => {
                             <div className="work-card-inner">
                                 <div className="work-face work-face-front">
                                     <div className="img-container">
-                                        <img src={work.img} alt={work.title} />
+                                        <img src={work.img} alt={work.title} loading="lazy" />
                                         {work.tag && <span className="work-tag">{work.tag}</span>}
                                     </div>
                                     <div className="card-content">

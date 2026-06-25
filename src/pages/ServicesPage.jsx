@@ -15,8 +15,8 @@ const ServicesPage = () => {
             <section className="full-services-section">
                 <div className="comparison-container">
                     <div className="image-comparison">
-                        <img src="/pc_before.png" alt="PC Antes del servicio" className="img-before" />
-                        <img src="/pc_after.png" alt="PC Después del servicio" className="img-after" />
+                        <img src="/pc_before.png" alt="PC Antes del servicio" className="img-before" loading="lazy" />
+                        <img src="/pc_after.png" alt="PC Después del servicio" className="img-after" loading="lazy" />
                         <span className="badge badge-status">Antes / Después</span>
                         <div className="overlay-desc">
                             Transformación: De polvo y desorden a cable management perfecto y luces espectaculares.

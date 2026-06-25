@@ -33,7 +33,7 @@ const Services = () => {
                     ))}
                 </div>
                 <div className="services-image">
-                    <img src="/service.png" alt="Placa Base y Hardware" />
+                    <img src="/service.png" alt="Placa Base y Hardware" loading="lazy" />
                     <div className="overlay"></div>
                 </div>
             </div>
