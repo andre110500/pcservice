@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Hero.scss';
 import { ArrowRight } from 'lucide-react';
 import ImageSlideshow from './ImageSlideshow';
+import ParticleField from './ParticleField';
 
 const Hero = () => {
     const fullSubtitle = 'Soluciones técnicas expertas para mantener tu equipo al máximo rendimiento. Diagnóstico profesional y reparaciones a nivel de componente.';
@@ -22,6 +23,7 @@ const Hero = () => {
 
     return (
         <section className="hero">
+            <ParticleField />
             <div className="hero-content">
                 <h1 className="title">
                     Reparación de PC <br />
